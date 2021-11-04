@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "TrovoEnhanced",
+    "description": "Multiple functions to enhance your Trovo Live experience.",
+    "version": "1.0.0",
+    "permissions" : [
+        "https://verd1c.github.io/*"
+    ],
+    "icons" : {
+        "16" : "/images/app16.png",
+        "48" : "/images/app48.png",
+        "128" : "/images/app128.png"
+    },
+    "page_action" : {
+        "default_icon" : {
+            "16" : "/images/app16.png",
+            "48" : "/images/app48.png",
+            "128" : "/images/app128.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://trovo.live/*"
+        ],
+        "js": [
+            "scripts/eventHandler.js"
+        ]
+    }]
+}
